@@ -1,0 +1,7 @@
+The five screenshots supplied with the source project were described as being captured from the then-current program on 2026-11-12, rather than mockups:
+01_menu.png — main.py launch menu.
+02_basic_lab.png — Basic TODO 1–2 before six checks were run.
+03_optimization_lab.png — Optimization tabs and 70/30 preset, with site cost scale 250–450.
+04_teacher_view.png — text teacher reference: three optima, three greedy rounds, 35 combinations.
+05_teacher_demo.png — graphical teacher demonstration: map, click a classroom to see distance, select weight presets.
+These are initial-state screenshots, not passed-test screenshots. To demonstrate scoring results, complete TODO 3–5, run the 49 expression cases, then capture an actual result screen. Do not use outdated prototype screenshots with costs 1–3 or a budget control as evidence of the current program. Historical screenshot claims were not independently reverified here.

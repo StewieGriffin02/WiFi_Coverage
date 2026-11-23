@@ -1,0 +1,27 @@
+Wi-Fi STEM Classroom Record
+Name/group: ________________  Date: ________________
+
+Lesson 1 — From distance to coverage
+1. Select a classroom point and router site; show coordinates, squared distance and coverage decision.
+2. Complete TODO 1–2 and compare your hand calculation with the program result.
+3. What should happen when distance equals the radius? Give a boundary example.
+Evidence: calculations, test results and a boundary explanation.
+
+Lesson 2 — From coverage to evaluating a plan
+1. Why can two routers' individual coverage counts not always be added?
+2. Complete TODO 3–5 and guided blocks A and B.
+3. Compare two plans by covered and missed classrooms and installation cost.
+4. In Debug → Overlap, predict the incorrect behavior, run the seeded error, repair it and verify.
+Evidence: comparison and a Bug → Cause → Repair → Test note.
+
+Lesson 3 — Search and justify an optimum
+1. Complete block C and run the assembled exhaustive search.
+2. Predict the effect of increasing cost weight; then test all three scenarios.
+Weights  Sites        Covered      Total cost      Missed rooms
+100/0    ________     ________     ________        __________
+70/30    ________     ________     ________        __________
+30/70    ________     ________     ________        __________
+3. In Debug → Comparison, explain best_score initialization and the comparison operator.
+4. Recommend one plan and describe its trade-off, including classrooms not covered.
+5. Which simplifying assumption most needs real data: fixed radius, site costs or one-point-per-classroom?
+Submission: export Evidence TXT with a justified recommendation and a model limitation. Do not compare scores from different weighting schemes as if the objectives were identical.

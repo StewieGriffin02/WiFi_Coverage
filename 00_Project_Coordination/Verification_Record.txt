@@ -1,0 +1,9 @@
+Verification record (historical report from supplied project):
+Earlier source project: 19 tests passed (python3 -m unittest -v test_coverage in that original project).
+Current main application: 54 passed (python3 run_tests.py; 10 base + 44 Stage 3).
+Optional extension: 7 passed (python3 -m unittest -v test_demand_extension).
+An initial optional run from the wrong directory could not import its test module; rerunning in WiFi_Lab succeeded.
+Synthetic population total: 410; legal three-router plans: 35.
+Budget 529: no feasible plan. Budget 530: ACG. Budget 750: BDG. Budget 1100: BDE.
+The extension uses the Python standard library and stage3/data.py for shared geometry and costs.
+No real GUI click or projection test, nor an authentic student teaching trial, was documented. Do not add earlier source tests to the current 61 total or treat old screenshots as evidence of current GUI layout.

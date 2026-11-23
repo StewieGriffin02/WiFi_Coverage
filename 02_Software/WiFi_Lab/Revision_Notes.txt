@@ -1,0 +1,31 @@
+Wi-Fi Classroom Lab – Revision Notes
+Based on the earlier group prototype.
+
+1. Changes in the current release
+The 7 sites, 12 detection points, fixed three-router rule and basic coverage model remain. TODO 6 now uses guided blocks A (merge covered points), B (calculate coverage, cost and weighted score) and C (update best plan). Blocks A and B are each exercised with 35 combinations; C has six comparison cases. TODO 3–5 expression helpers are reused inside the assembled algorithm.
+
+Three weight presets are supported: coverage-first 100/0, balanced 70/30, cost-first 30/70. Switching weights keeps code and older evidence, but invalidates current certification. Two seeded debugging exercises test duplicate counting and incorrect best-score comparisons. Evidence can be copied or exported to TXT; the real student-returned plan, not a substituted reference optimum, is displayed.
+
+The Optimization lab has Expressions, Algorithm, Debug and Evidence tabs. Data in stage3/data.py are the authoritative installation costs. stage3/stage3_core.py handles score/plan validity and ties. stage3/coding_engine.py checks expression safety, assembles blocks, and runs student code in a separate process with a short timeout. stage3/map_view.py draws the map. GUI state is invalidated on edits, and stale background callbacks cannot overwrite new tests.
+
+2. Main files
+main.py: entry menu and --basic / --advanced switches.
+student_version/gui.py: Basic TODO 1–2 interface.
+stage3/stage3_gui.py: four-tab Optimization lab and evidence/state.
+stage3/stage3_core.py: mathematical evaluation and optimum checking.
+stage3/student_algorithm.py: separate incomplete file-based exercise; not synchronized with GUI editor.
+stage3/test_revision.py: 21 regression tests; stage3/test_gui_state.py: 10 controller/expression tests.
+teacher/reference_answers.py: teacher-only answers.
+run_tests.py: all 54 main automated tests; test_demand_extension.py: seven additional optional tests.
+Start_WiFi_Lab.bat and Start_WiFi_Lab.command: Windows/macOS launch shortcuts.
+The old root gui.py is reference material, not the student entry point.
+
+3. Historical verification
+54 main tests passed: 10 base, 13 existing Stage 3, 21 new regression, 10 controller/expression. The tests cover 49 expression checks and 84 point/site geometry pairs internally; these are not additional independent test-suite counts.
+100/0 -> BDE, 12/12, cost 1100, score 1.0000.
+70/30 -> BDG, 11/12, cost 750, score about 0.7371, uncovered C3.
+30/70 -> ACG, 8/12, cost 530, score about 0.5627, uncovered C2, C4, C5, C9.
+No real desktop click-through, projector check or classroom trial was recorded. Inspect on actual teaching hardware.
+
+4. Classroom use
+Extract the package, navigate to WiFi_Lab and launch main.py. Check teacher answers before distributing blank student exercises. Evidence is session-only; export before closing. The separate population/budget extension exists as a command-line script; it is not a GUI feature. Walls, attenuation, weak/strong RF signals and 3D are out of scope.

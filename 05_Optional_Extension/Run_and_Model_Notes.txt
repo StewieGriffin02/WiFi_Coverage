@@ -1,0 +1,6 @@
+Optional command-line extension: population and budget
+Run from 02_Software/WiFi_Lab:
+python3 demand_extension.py --budget 750
+python3 demand_extension.py --budget 750 --csv results.csv
+python3 -m unittest -v test_demand_extension
+The program maintains exactly three routers and uses stage3/data.py for the same sites, geometry and costs as the main model. It uses synthetic classroom populations totaling 410; this is a teaching proxy, not measured Wi-Fi capacity. It enumerates 35 plans, filters by hard budget and identifies relevant Pareto trade-offs. Earlier reported examples: budget 529 no feasible plan; budget 530 ACG; budget 750 BDG; budget 1100 BDE. Do not mistake the budget constraint for the cost preference weight in the main GUI; the GUI has no budget controls.
